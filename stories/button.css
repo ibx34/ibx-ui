@@ -1,6 +1,6 @@
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500 1;
   font-size: 0.850rem;
   font-kerning: auto;
   letter-spacing: 0.052rem;
@@ -16,15 +16,26 @@
     background-color: rgba(0,0,0,0.2);
   }
   &:active {
-    background-color: rgba(0,0,0,0.29);
-    color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.1);
   }
 }
+
+.button--primary {
+color: white;
+  background-color: rgb(62, 93, 130);
+  &:hover {
+    background-color: rgb(50, 75, 106);
+  }
+  &:active {
+    background-color: rgb(35, 52, 73);
+  }
+}
+
 
 /*
 primary color: https://www.shadegenerator.com/4D74A3
 */
-.button--primary {
+/* .button--primary {
   color: black;
   background-color: rgb(157, 179, 204);
   &:hover {
@@ -33,7 +44,7 @@ primary color: https://www.shadegenerator.com/4D74A3
   &:active {
     background-color: rgb(228, 234, 241);
   }
-}
+} */
 /*
 .storybook-button--secondary {
   color: #333;

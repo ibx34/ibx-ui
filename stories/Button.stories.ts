@@ -18,6 +18,13 @@ export const Primary = {
   },
 };
 
+export const Default = {
+  args: {
+    primary: false,
+    label: 'Button',
+  },
+};
+
 // export const Secondary = {
 //   args: {
 //     label: 'Button',

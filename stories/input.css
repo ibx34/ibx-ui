@@ -23,7 +23,7 @@ input {
   }
 
   &:focus {
-    border-color: rgb(77, 116, 163);
+    border-color: rgb(157, 179, 204);
     background-color: rgb(256,256,256);
   }
 

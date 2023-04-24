@@ -1,0 +1,66 @@
+input {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.500rem;
+  padding-bottom: 0.500rem;
+  border-style: solid;
+  border-width: 0.220rem;
+  border-radius: 0.125rem;
+  border-color: rgb(148, 176, 160);
+  outline: none;
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  background-color: rgb(226, 210, 212);
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*
+    border color: https://www.shadegenerator.com/88A795
+    background color: https://www.shadegenerator.com/DBC7C9
+  */
+  &:hover {
+    background-color: rgb(233, 221, 223);
+    border-color: rgb(109, 134, 119);
+  }
+
+  &:focus {
+    border-color: rgb(77, 116, 163);
+    background-color: rgb(256,256,256);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgb(129, 159, 142);
+    border-color: rgb(109, 134, 119);
+  }
+}
+/* .storybook-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .storybook-button--primary {
+    color: white;
+    background-color: #1ea7fd;
+  }
+  .storybook-button--secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  }
+  .storybook-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  .storybook-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  .storybook-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+   */

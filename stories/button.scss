@@ -1,0 +1,66 @@
+@import url('./main.scss');
+
+.button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.850rem;
+  font-kerning: auto;
+  letter-spacing: 0.052rem;
+  padding-top: 0.400rem;
+  padding-bottom: 0.400rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  border-radius: 0.156rem;
+
+  &:hover {
+    background-color: var(--secondary-hover-color);
+  }
+
+  &:active {
+    background-color: var(--secondary-active-color);
+  }
+}
+
+.button--primary {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-hover-color);
+  }
+
+  &:active {
+    background-color: var(--primary-active-color);
+  }
+}
+
+.button--danger {
+  color: var(--danger-text-color);
+  background-color: var(--danger-color);
+
+  &:hover {
+    background-color: var(--danger-hover-color);
+  }
+
+  &:active {
+    background-color: var(--danger-active-color);
+  }
+}
+
+.button--warning {
+  color: var(--warning-text-color);
+  background-color: var(--warning-color);
+
+  &:hover {
+    background-color: var(--warning-hover-color);
+  }
+
+  &:active {
+    background-color: var(--warning-active-color);
+  }
+}

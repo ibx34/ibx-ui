@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import './button.scss';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, label, ...props }) => {
-  const mode = primary ? 'button--primary' : 'button--secondary';
+export const Button = ({ style, label, ...props }) => {
+  const _style = {
+    "primary": "button--primary",
+    "secondary": "button--secondary",
+    "danger": "button--danger",
+    "warning": "button--warning"
+  }[style];
   return (
     <button
       type="button"
-      className={['button', mode].join(' ')}
+      className={['button', _style].join(' ')}
       {...props}
     >
       {label}
@@ -19,10 +21,7 @@ export const Button = ({ primary, label, ...props }) => {
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
+  style: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */

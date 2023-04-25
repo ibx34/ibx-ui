@@ -6,43 +6,43 @@ export default {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    primary: { 
-      control: { type: 'switch' },
-     },
+    style: {
+      control: { type: 'select', default: 'secondary', require: true, },
+      options: [
+        'primary',
+        'secondary',
+        'danger',
+        'warning'
+      ]
+    },
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
+    style: 'primary',
+    label: 'Button',
+  },
+};
+
+export const Warning = {
+  args: {
+    style: 'warning',
+    label: 'Button',
+  },
+};
+
+export const Danger = {
+  args: {
+    style: 'danger',
     label: 'Button',
   },
 };
 
 export const Default = {
   args: {
-    primary: false,
+    style: 'secondary',
     label: 'Button',
   },
 };
-
-// export const Secondary = {
-//   args: {
-//     label: 'Button',
-//   },
-// };
-
-// export const Large = {
-//   args: {
-//     size: 'large',
-//     label: 'Button',
-//   },
-// };
-
-// export const Small = {
-//   args: {
-//     size: 'small',
-//     label: 'Button',
-//   },
-// };

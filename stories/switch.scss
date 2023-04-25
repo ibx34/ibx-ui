@@ -1,5 +1,18 @@
 @import url('./main.scss');
 
+.switch--box {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    font-kerning: auto;
+    letter-spacing: 0.052rem;
+    color: var(--input-text-color);
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+}
+
 .switch {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 600;

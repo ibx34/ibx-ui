@@ -7,6 +7,7 @@ export default {
     tags: ['autodocs'],
     argTypes: {
         value: { type: 'boolean', default: false },
+        label: { type: 'string', default: "Keep your settings" },
         left: { type: 'string', default: "On" },
         right: { type: 'string', default: "Off" },
     },
@@ -14,6 +15,7 @@ export default {
 
 export const Default = {
     args: {
+        label: "Keep your settings",
         value: false,
         left: "On",
         right: "Off"

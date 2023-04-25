@@ -6,6 +6,7 @@ export default {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
+    subtle: { type: 'boolean', default: false },
     style: {
       control: { type: 'select', default: 'secondary', require: true, },
       options: [
@@ -21,6 +22,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
+    subtle: false,
     style: 'primary',
     label: 'Button',
   },
@@ -28,6 +30,7 @@ export const Primary = {
 
 export const Warning = {
   args: {
+    subtle: false,
     style: 'warning',
     label: 'Button',
   },
@@ -35,6 +38,7 @@ export const Warning = {
 
 export const Danger = {
   args: {
+    subtle: false,
     style: 'danger',
     label: 'Button',
   },
@@ -42,6 +46,7 @@ export const Danger = {
 
 export const Default = {
   args: {
+    subtle: true,
     style: 'secondary',
     label: 'Button',
   },

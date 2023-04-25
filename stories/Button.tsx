@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
 
-export const Button = ({ style, label, ...props }) => {
+export const Button = ({ style, subtle, label, ...props }) => {
   const _style = {
     "primary": "button--primary",
     "secondary": "button--secondary",
@@ -12,7 +12,7 @@ export const Button = ({ style, label, ...props }) => {
   return (
     <button
       type="button"
-      className={['button', _style].join(' ')}
+      className={['button', _style, subtle ? 'button--subtle' : ''].join(' ')}
       {...props}
     >
       {label}
@@ -22,6 +22,7 @@ export const Button = ({ style, label, ...props }) => {
 
 Button.propTypes = {
   style: PropTypes.string.isRequired,
+  subtle: PropTypes.bool,
   /**
    * Optional click handler
    */

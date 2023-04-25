@@ -7,7 +7,7 @@ export const Switch = ({ label, right, left, value, ...props }) => {
     return (
         <div className="switch--box">
             {label == undefined ? null : <span>{label}</span>}
-            <label className="switch">
+            <label className={["switch", switchValue == true ? 'switch--active' : ''].join(' ')}>
                 <input className="switch--checkbox" type="checkbox" value={switchValue == false ? 1 : 0} checked={value} onChange={(e) => {
                     setSwitchValue(parseInt(e.target.value) > 0 ? true : false)
                 }} />
@@ -26,5 +26,5 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
-    value: false,
+    value: true,
 };

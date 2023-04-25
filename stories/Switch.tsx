@@ -11,8 +11,8 @@ export const Switch = ({ label, right, left, value, ...props }) => {
                 <input className="switch--checkbox" type="checkbox" value={switchValue == false ? 1 : 0} checked={value} onChange={(e) => {
                     setSwitchValue(parseInt(e.target.value) > 0 ? true : false)
                 }} />
-                <span className={["switch--label", switchValue == true ? "switch--selected" : ""].join(' ')}>{left ? left : "On"}</span>
-                <span className={["switch--label", switchValue == false ? "switch--selected" : ""].join(' ')}>{right ? right : "Of"}</span>
+                <span className={["switch--label", switchValue == false ? "switch--selected" : ""].join(' ')}>{left ? left : "On"}</span>
+                <span className={["switch--label", switchValue == true ? "switch--selected" : ""].join(' ')}>{right ? right : "Off"}</span>
             </label>
         </div>
     );

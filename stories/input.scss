@@ -1,6 +1,6 @@
 @import url('./main.scss');
 
-input:not(checkbox):not(.switch--checkbox) {
+input:not(input[checkbox]):not(.switch--checkbox) {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.500rem;

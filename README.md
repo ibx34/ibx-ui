@@ -4,4 +4,4 @@ A custom UI library for my projects, namely [ChannelCi](https://github.com/Nelli
 
 ## Contributing
 
-Any contributations are appreciated.
+Any contributations are appreciated. Im new to making UIs and React libraries so any help is appreciated.

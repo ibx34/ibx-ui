@@ -39,13 +39,13 @@
     box-shadow: inset 2px 2px 0 0 var(--primary-active-color),  inset -2px -2px 0 0 var(--primary-active-color);
   }
   &:focus {
-    box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color),  inset -1px -1px 0 0 var(--primary-focused-shadow-color);
+    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
   }
   &:active, &:focus {
-    outline: 0.126rem;
+    outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 0.1257rem;
+    outline-offset: 0.13rem;
   }
     //background-color: var(--primary-active-color);
 }

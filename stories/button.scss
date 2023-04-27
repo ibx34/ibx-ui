@@ -40,13 +40,10 @@
     background-color: var(--primary-hover-color);
     box-shadow: inset 2px 2px 0 0 var(--primary-hover-shadow-color), inset -2px -2px 0 0 var(--primary-hover-shadow-color);
   }
-
   &:focus:not(:disabled) {
-    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color), inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
+    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
   }
-
-  &:active:not(:disabled),
-  &:focus:not(:disabled) {
+  &:active:not(:disabled), &:focus:not(:disabled) {
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;

@@ -7,6 +7,7 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     subtle: { type: 'boolean', default: false },
+    disabled: { type: 'boolean', default: false },
     style: {
       control: { type: 'select', default: 'secondary', require: true, },
       options: [
@@ -25,6 +26,16 @@ export const Primary = {
     subtle: false,
     style: 'primary',
     label: 'Button',
+    disabled: false
+  },
+};
+
+export const DisabledPrimary = {
+  args: {
+    subtle: false,
+    style: 'primary',
+    label: 'Button',
+    disabled: true
   },
 };
 
@@ -33,6 +44,7 @@ export const Warning = {
     subtle: false,
     style: 'warning',
     label: 'Button',
+    disabled: false
   },
 };
 
@@ -41,6 +53,7 @@ export const Danger = {
     subtle: false,
     style: 'danger',
     label: 'Button',
+    disabled: false
   },
 };
 
@@ -49,5 +62,6 @@ export const Default = {
     subtle: true,
     style: 'secondary',
     label: 'Button',
+    disabled: false
   },
 };

@@ -15,13 +15,19 @@
   transition: all;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
-  border-radius: 0.156rem;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.6);
+  // border-radius: 0.156rem;
 
   &:hover {
     background-color: var(--secondary-hover-color);
   }
 
   &:active {
+    background-color: var(--secondary-active-color);
+    box-shadow: inset 0 -1px 1px 0 rgba(0,0,0,0.6);
+  }
+  &:disabled {
+    cursor: not-allowed;
     background-color: var(--secondary-active-color);
   }
 }

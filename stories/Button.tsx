@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
 
-export const Button = ({ style, subtle, label, ...props }) => {
+export const Button = ({ style, subtle, label, disabled, ...props }) => {
   const _style = {
     "primary": "button--primary",
     "secondary": "button--secondary",
@@ -12,6 +12,7 @@ export const Button = ({ style, subtle, label, ...props }) => {
   return (
     <button
       type="button"
+      disabled={disabled}
       className={['button', _style, subtle ? 'button--subtle' : ''].join(' ')}
       {...props}
     >
@@ -23,6 +24,7 @@ export const Button = ({ style, subtle, label, ...props }) => {
 Button.propTypes = {
   style: PropTypes.string.isRequired,
   subtle: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * Optional click handler
    */
@@ -34,4 +36,5 @@ Button.defaultProps = {
   primary: false,
   size: 'medium',
   onClick: undefined,
+  disabled: true
 };

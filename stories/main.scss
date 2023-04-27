@@ -3,11 +3,13 @@
         --primary-color: rgb(62, 93, 130);
         --primary-text-color: white;
         --primary-hover-color: rgb(50, 75, 106);
+        --primary-hover-shadow-color: rgb(20, 33, 49);
         --primary-active-color: rgb(35, 52, 73);
-        --primary-focused-shadow-color: rgb(0,0,0);
-        --danger-color: #dd3737;
+        --primary-focused-shadow-color: rgb(0, 0, 0);
+        --danger-color: rgb(221, 55, 55);
         --danger-text-color: white;
         --danger-hover-color: rgb(188, 47, 47);
+        --danger-hover-shadow-color: rgb(93, 18, 18);
         --danger-active-color: rgb(166, 41, 41);
         --warning-color: rgb(181, 179, 61);
         --warning-text-color: white;
@@ -32,7 +34,8 @@
         --primary-text-color: black;
         --primary-hover-color: rgb(97, 164, 247);
         --primary-active-color: rgb(171, 207, 251);
-        --primary-focused-shadow-color: rgba(256,256,256, 0.6);
+        --primary-hover-shadow-color: rgb(84, 103, 126);
+        --primary-focused-shadow-color: rgba(256, 256, 256, 0.2);
         /* https://www.shadegenerator.com/FC3737 */
         --danger-color: rgb(252, 75, 75);
         --danger-text-color: black;

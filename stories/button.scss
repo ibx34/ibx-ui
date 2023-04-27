@@ -24,9 +24,11 @@
   &:active {
     background-color: var(--secondary-active-color);
   }
+
   &:disabled {
     cursor: not-allowed;
-    background-color: var(--secondary-active-color);
+    background-color: rgba(0, 0, 0, 0.3);
+
   }
 }
 
@@ -34,33 +36,48 @@
   color: var(--primary-text-color);
   background-color: var(--primary-color);
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--primary-hover-color);
-    box-shadow: inset 2px 2px 0 0 var(--primary-active-color),  inset -2px -2px 0 0 var(--primary-active-color);
+    box-shadow: inset 2px 2px 0 0 var(--primary-hover-shadow-color), inset -2px -2px 0 0 var(--primary-hover-shadow-color);
   }
-  &:focus {
-    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
+
+  &:focus:not(:disabled) {
+    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color), inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
   }
-  &:active, &:focus {
+
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 0.13rem;
+    outline-offset: 0.10rem;
   }
-    //background-color: var(--primary-active-color);
+
+  //background-color: var(--primary-active-color);
 }
 
 .button--danger {
   color: var(--danger-text-color);
   background-color: var(--danger-color);
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--danger-hover-color);
+    box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
   }
 
-  &:active {
-    background-color: var(--danger-active-color);
+  &:focus:not(:disabled) {
+    box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color), inset -1px -1px 0 0 var(--primary-focused-shadow-color);
   }
+
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    outline: 2px;
+    outline-color: var(--primary-color);
+    outline-style: solid;
+    outline-offset: 0.13rem;
+  }
+
+  //background-color: var(--primary-active-color);
 }
 
 .button--warning {

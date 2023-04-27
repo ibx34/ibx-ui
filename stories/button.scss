@@ -8,14 +8,14 @@
   letter-spacing: 0.052rem;
   padding-top: 0.400rem;
   padding-bottom: 0.400rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.500rem;
+  padding-right: 0.500rem;
   cursor: pointer;
   border: none;
   transition: all;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
-  border-radius: 0.156rem;
+  border-radius: 0.200rem;
 
   &:hover {
     background-color: var(--secondary-hover-color);
@@ -36,11 +36,18 @@
 
   &:hover {
     background-color: var(--primary-hover-color);
+    box-shadow: inset 2px 2px 0 0 var(--primary-active-color),  inset -2px -2px 0 0 var(--primary-active-color);
   }
-
-  &:active {
-    background-color: var(--primary-active-color);
+  &:focus {
+    box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color),  inset -1px -1px 0 0 var(--primary-focused-shadow-color);
   }
+  &:active, &:focus {
+    outline: 0.126rem;
+    outline-color: var(--primary-color);
+    outline-style: solid;
+    outline-offset: 0.1rem;
+  }
+    //background-color: var(--primary-active-color);
 }
 
 .button--danger {

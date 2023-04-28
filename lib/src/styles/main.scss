@@ -1,0 +1,421 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: rgb(62, 93, 130);
+        --primary-text-color: white;
+        --primary-hover-color: rgb(50, 75, 106);
+        --primary-hover-shadow-color: rgb(20, 33, 49);
+        --primary-active-color: rgb(35, 52, 73);
+        --primary-focused-shadow-color: rgb(0, 0, 0);
+        --danger-color: rgb(221, 55, 55);
+        --danger-text-color: white;
+        --danger-hover-color: rgb(188, 47, 47);
+        --danger-hover-shadow-color: rgb(93, 18, 18);
+        --danger-active-color: rgb(166, 41, 41);
+        --warning-color: rgb(181, 179, 61);
+        --warning-text-color: white;
+        --warning-hover-color: rgb(172, 170, 58);
+        --warning-active-color: rgb(145, 143, 49);
+        /* https://www.shadegenerator.com/FFFFFF */
+        --input-border-color: rgb(166, 166, 166);
+        --input-background-color: rgb(242, 242, 242);
+
+        --input-hover-color: rgb(217, 217, 217);
+        --input-active-color: rgb(242, 242, 242);
+        --input-text-color: rgb(0, 0, 0);
+        --switch-on-color: rgb(38, 201, 95);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --switch-on-color: rgb(38, 201, 95);
+        /* https://www.shadegenerator.com/2C86F4 */
+        --primary-color: rgb(44, 134, 244);
+        --primary-text-color: black;
+        --primary-hover-color: rgb(97, 164, 247);
+        --primary-active-color: rgb(171, 207, 251);
+        --primary-hover-shadow-color: rgb(84, 103, 126);
+        --primary-focused-shadow-color: rgba(256, 256, 256, 0.2);
+        /* https://www.shadegenerator.com/FC3737 */
+        --danger-color: rgb(252, 75, 75);
+        --danger-text-color: black;
+        --danger-hover-color: rgb(253, 105, 105);
+        --danger-active-color: rgb(253, 135, 135);
+        /* https://www.shadegenerator.com/B5B33D */
+        --warning-color: rgb(192, 190, 90);
+        --warning-text-color: black;
+        --warning-hover-color: rgb(211, 209, 139);
+        --warning-active-color: rgb(225, 225, 177);
+        --secondary-hover-color: rgba(256, 256, 256, 0.6);
+        --secondary-active-color: rgba(256, 256, 256, 0.2);
+        /* https://www.shadegenerator.com/FFFFFF */
+        --input-border-color: rgb(77, 77, 77);
+        --input-background-color: rgb(38, 38, 38);
+        --input-active-color: rgb(77, 77, 77);
+        --input-text-color: rgb(256, 256, 256);
+    }
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-Regular.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-Italic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 275;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-ExtraLight.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 275;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-ExtraLightItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 300;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-Light.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 300;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-LightItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 600;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-SemiBold.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 600;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-SemiBoldItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-Bold.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-BoldItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 800;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-ExtraBold.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 800;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-ExtraBoldItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: normal;
+    font-weight: 900;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-Black.woff) format('woff')
+}
+
+@font-face {
+    font-family: nunito sans;
+    font-style: italic;
+    font-weight: 900;
+    src: local('Nunito Sans'), url(https://fonts.cdnfonts.com/s/15893/NunitoSans-BlackItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: helvetica neue;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Helvetica Neue'), url(https://fonts.cdnfonts.com/s/29136/HelveticaNeueBold.woff) format('woff')
+}
+
+@font-face {
+    font-family: helvetica neue;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Helvetica Neue'), url('https://fonts.cdnfonts.com/s/29136/Helvetica 76 Bold Italic.woff') format('woff')
+}
+
+@font-face {
+    font-family: helvetica neue;
+    font-style: italic;
+    font-weight: 900;
+    src: local('Helvetica Neue'), url('https://fonts.cdnfonts.com/s/29136/HelveticaNeueBlackItalic 1.woff') format('woff')
+}
+
+@font-face {
+    font-family: helvetica neue;
+    font-style: italic;
+    font-weight: 500;
+    src: local('Helvetica Neue'), url(https://fonts.cdnfonts.com/s/29136/HelveticaNeueMediumItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: helvetica neue;
+    font-style: normal;
+    font-weight: 900;
+    src: local('Helvetica Neue'), url(https://fonts.cdnfonts.com/s/29136/Helvetica95Black.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 25 ultralight';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica 25 UltraLight'), url(https://fonts.cdnfonts.com/s/29136/Helvetica25UltraLight_22433.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 35 thin';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica 35 Thin'), url(https://fonts.cdnfonts.com/s/29136/Helvetica35Thin_22435.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 45 light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica 45 Light'), url(https://fonts.cdnfonts.com/s/29136/Helvetica45Light_22437.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 55 roman';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica 55 Roman'), url(https://fonts.cdnfonts.com/s/29136/Helvetica55Roman_22439.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 65 medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Helvetica 65 Medium'), url(https://fonts.cdnfonts.com/s/29136/Helvetica65Medium_22443.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 25 ultralight';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Helvetica 25 UltraLight'), url(https://fonts.cdnfonts.com/s/29136/Helvetica26UltraLightItalic_22434.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 35 thin';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Helvetica 35 Thin'), url(https://fonts.cdnfonts.com/s/29136/Helvetica36ThinItalic_22436.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 45 light';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Helvetica 45 Light'), url(https://fonts.cdnfonts.com/s/29136/Helvetica46LightItalic_22438.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 55 roman';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Helvetica 55 Roman'), url(https://fonts.cdnfonts.com/s/29136/Helvetica56Italic_22440.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 65 medium';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Helvetica 65 Medium'), url(https://fonts.cdnfonts.com/s/29136/Helvetica85Heavy_22449.woff) format('woff')
+}
+
+@font-face {
+    font-family: 'helvetica 65 medium';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Helvetica 65 Medium'), url(https://fonts.cdnfonts.com/s/29136/Helvetica86HeavyItalic_22450.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIAL.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALN.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Arial'), url('https://fonts.cdnfonts.com/s/29105/ARIALI 1.woff') format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALI.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALNI.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 500;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ArialMdm.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 500;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ArialMdmItl.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Arial'), url('https://fonts.cdnfonts.com/s/29105/ARIALBD 1.woff') format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALBD.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 700;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALNB.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Arial'), url('https://fonts.cdnfonts.com/s/29105/ARIALBI 1.woff') format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALBI.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIALNBI.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 900;
+    src: local('Arial'), url(https://fonts.cdnfonts.com/s/29105/ARIBLK.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial black;
+    font-style: italic;
+    font-weight: 400;
+    src: local('Arial Black'), url(https://fonts.cdnfonts.com/s/29105/ARIALBLACKITALIC.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial light;
+    font-style: normal;
+    font-weight: 300;
+    src: local('Arial Light'), url(https://fonts.cdnfonts.com/s/29105/ARIALLGT.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial ce;
+    font-style: normal;
+    font-weight: 500;
+    src: local('Arial CE'), url(https://fonts.cdnfonts.com/s/29105/ArialCE.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial ce mt black;
+    font-style: normal;
+    font-weight: 900;
+    src: local('Arial CE MT Black'), url(https://fonts.cdnfonts.com/s/29105/ArialCEMTBlack.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial ce;
+    font-style: normal;
+    font-weight: 7;
+    src: local('Arial CE'), url(https://fonts.cdnfonts.com/s/29105/arialceb.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial light;
+    font-style: italic;
+    font-weight: 300;
+    src: local('Arial Light'), url(https://fonts.cdnfonts.com/s/29105/ARIALLGTITL.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial ce;
+    font-style: italic;
+    font-weight: 500;
+    src: local('Arial CE'), url(https://fonts.cdnfonts.com/s/29105/ArialCEItalic.woff) format('woff')
+}
+
+@font-face {
+    font-family: arial ce;
+    font-style: italic;
+    font-weight: 700;
+    src: local('Arial CE'), url(https://fonts.cdnfonts.com/s/29105/ArialCEBoldItalic.woff) format('woff')
+}

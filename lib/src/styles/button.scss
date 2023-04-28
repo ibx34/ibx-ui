@@ -1,0 +1,92 @@
+.button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.850rem;
+    font-kerning: auto;
+    letter-spacing: 0.052rem;
+    padding-top: 0.400rem;
+    padding-bottom: 0.400rem;
+    padding-left: 0.500rem;
+    padding-right: 0.500rem;
+    cursor: pointer;
+    border: none;
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    border-radius: 0.200rem;
+
+    &:hover {
+        background-color: var(--secondary-hover-color);
+    }
+
+    &:active {
+        background-color: var(--secondary-active-color);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
+}
+
+.button--primary {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+
+    &:hover:not(:disabled) {
+        background-color: var(--primary-hover-color);
+        box-shadow: inset 2px 2px 0 0 var(--primary-hover-shadow-color), inset -2px -2px 0 0 var(--primary-hover-shadow-color);
+    }
+
+    &:focus:not(:disabled) {
+        box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color), inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
+    }
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 0.10rem;
+    }
+
+    //background-color: var(--primary-active-color);
+}
+
+.button--danger {
+    color: var(--danger-text-color);
+    background-color: var(--danger-color);
+
+    &:hover:not(:disabled) {
+        background-color: var(--danger-hover-color);
+        box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
+    }
+
+    &:focus:not(:disabled) {
+        box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color), inset -1px -1px 0 0 var(--primary-focused-shadow-color);
+    }
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 0.13rem;
+    }
+
+    //background-color: var(--primary-active-color);
+}
+
+.button--warning {
+    color: var(--warning-text-color);
+    background-color: var(--warning-color);
+
+    &:hover {
+        background-color: var(--warning-hover-color);
+    }
+
+    &:active {
+        background-color: var(--warning-active-color);
+    }
+}

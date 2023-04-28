@@ -6,11 +6,25 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     disabled: { control: 'boolean' },
+    readOnly: { control: 'boolean' },
+  },
+};
+
+export const Default = {
+  args: {
+    readOnly: false,
+    disabled: false
   },
 };
 
 export const Disabled = {
   args: {
     disabled: true
+  },
+};
+
+export const ReadOnly = {
+  args: {
+    readOnly: true
   },
 };

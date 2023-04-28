@@ -5,12 +5,13 @@ import './input.scss';
 /**
  * Primary UI component for user interaction
  */
-export const Input = ({ disabled, ...props }) => {
+export const Input = ({ disabled, readOnly, ...props }) => {
   ///const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <input
       type="text"
       disabled={disabled}
+      readOnly={readOnly}
       {...props}
     //   className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
     //   style={backgroundColor && { backgroundColor }}
@@ -20,9 +21,11 @@ export const Input = ({ disabled, ...props }) => {
 };
 
 Input.propTypes = {
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  readOnly: PropTypes.bool
 };
 
 Input.defaultProps = {
-  disabled: false
+  disabled: false,
+  readOnly: false
 };

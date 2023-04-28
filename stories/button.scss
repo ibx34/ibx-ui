@@ -12,9 +12,9 @@
   padding-right: 0.500rem;
   cursor: pointer;
   border: none;
-  transition: all;
-  transition-duration: 150ms;
-  transition-timing-function: ease-in-out;
+  transition-property: all box-shadow;
+  transition-duration: 60ms;
+  transition-timing-function: ease;
   border-radius: 0.200rem;
 
   &:hover {
@@ -50,7 +50,7 @@
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 0.10rem;
+    outline-offset: 2px;
   }
 
   //background-color: var(--primary-active-color);
@@ -74,7 +74,7 @@
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 0.13rem;
+    outline-offset: 2px;
   }
 
   //background-color: var(--primary-active-color);

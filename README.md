@@ -1,6 +1,11 @@
 # ibx-ui
 
-A custom UI library for my projects, namely [ChannelCi](https://github.com/NellisLabs). It takes roots in many different popular companies' UIs (biggest is Atlassian). 
+A custom UI library for my projects, namely [ChannelCi](https://github.com/NellisLabs).
+
+## TODO
+
+- [ ] Select a nice, strong color theme. This may fall under branding for the organization that will primarily use this.
+- [ ] Use consistant variables across all styles. Same colors, paddings, radiuses, etc.
 
 ## Contributing
 

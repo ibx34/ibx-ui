@@ -19,39 +19,77 @@
     font-size: 0.850rem;
     font-kerning: auto;
     letter-spacing: 0.052rem;
-    padding-top: 0.400rem;
-    padding-bottom: 0.400rem;
+    padding-top: 0.100rem;
+    padding-bottom: 0.100rem;
     cursor: pointer;
     transition: all;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
-    outline: none;
     position: relative;
     color: var(--input-text-color);
-    background-color: var(--input-background-color);
     border-style: solid;
+    background-color: var(--input-background-color);
     border-width: 0.220rem;
-    border-radius: 0.125rem;
+    border-radius: 999px;
     border-color: var(--input-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40px;
+    width: 100%;
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+      outline: 2px;
+      outline-color: var(--primary-color);
+      outline-style: solid;
+      outline-offset: 0.08rem;
+    }
+}
+
+.switch--on {
+    background-color: green;
+    border-color: green;
 }
 
 .switch--label {
-    padding-top: 0.400rem;
-    padding-bottom: 0.400rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    user-select: none;
-    color: var(--input-background-color);
+    background-color: transparent;
+    fill: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-basis: content;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    &.selected {
+        fill: white;
+    }
+    &.off {
+        background-color: white;
+        fill: white;
+        border-radius: 999rem;
+    }
 }
 
-.switch--selected {
-    height: 100%;
-    width: 100%;
-    background-color: var(--primary-color);
-    color: var(--primary-text-color);
-    border-radius: 0.125rem;
+.switch--puck {
+    background-color: white;
+    padding-left: 0.150rem;
+    padding-right: 0.150rem;
+    padding-top: 0.150rem;
+    padding-bottom: 0.150rem;
+    border-radius: 999rem;
+    &.off {
+        float: left
+    }
+    &.selected {
+        float: right;
+    }
+    ::befpre {
+        content: ' ';
+    }
 }
-
 .switch--checkbox {
     position: absolute;
     top: 0px;

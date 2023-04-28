@@ -14,22 +14,11 @@ input:not(input[checkbox]):not(.switch--checkbox) {
   color: var(--input-text-color);
   transition-duration: 60ms;
   transition-timing-function: ease;
-  // transition-timing-function: ease;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
   // Smaller or larger? Maybe i should revert back to 945
   font-size: 0.890rem;
   font-kerning: auto;
-
-  /*
-    border color: https://www.shadegenerator.com/88A795
-    background color: https://www.shadegenerator.com/DBC7C9
-  */
-  // &:hover {
-  //   background-color: var(--input-hover-color);
-  //   border-color: var(--primary-color);
-  // }
-
 
   &:active:not(:disabled),
   &:focus:not(:disabled) {

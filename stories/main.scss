@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         --primary-color: rgb(62, 93, 130);
         --primary-text-color: white;
@@ -26,7 +26,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         --switch-on-color: rgb(38, 201, 95);
         /* https://www.shadegenerator.com/2C86F4 */

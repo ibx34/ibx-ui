@@ -6,16 +6,15 @@
   font-size: 0.850rem;
   font-kerning: auto;
   letter-spacing: 0.052rem;
-  padding-top: 0.400rem;
-  padding-bottom: 0.400rem;
+  padding-top: 0.420rem;
+  padding-bottom: 0.420rem;
   padding-left: 0.500rem;
   padding-right: 0.500rem;
   cursor: pointer;
-  border: none;
-  transition-property: all box-shadow;
-  transition-duration: 60ms;
-  transition-timing-function: ease;
-  border-radius: 0.200rem;
+  border: solid;
+  border-width: 1px;
+  transition: box-shadow 80ms ease-in-out, outline 60ms ease; 
+  border-radius: 0.250rem;
 
   &:hover {
     background-color: var(--secondary-hover-color);
@@ -34,20 +33,24 @@
 
 .button--primary {
   color: var(--primary-text-color);
+  border-color: var(--primary-color);
   background-color: var(--primary-color);
 
   &:hover:not(:disabled) {
+    border-color: var(--primary-hover-shadow-color);
     background-color: var(--primary-hover-color);
     box-shadow: inset 2px 2px 0 0 var(--primary-hover-shadow-color), inset -2px -2px 0 0 var(--primary-hover-shadow-color);
   }
-  &:focus:not(:disabled) {
-    box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
-  }
+  // &:focus:not(:disabled) {
+  //   box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
+  // }
   &:active:not(:disabled), &:focus:not(:disabled) {
+    box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+    border-color: rgb(0,0,0);
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 2px;
+    outline-offset: 1px;
   }
 
   //background-color: var(--primary-active-color);
@@ -55,23 +58,23 @@
 
 .button--danger {
   color: var(--danger-text-color);
+  border-color: var(--danger-color);
   background-color: var(--danger-color);
 
   &:hover:not(:disabled) {
     background-color: var(--danger-hover-color);
+    border-color: var(--danger-hover-shadow-color);
     box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
-  }
-
-  &:focus:not(:disabled) {
-    box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color), inset -1px -1px 0 0 var(--primary-focused-shadow-color);
   }
 
   &:active:not(:disabled),
   &:focus:not(:disabled) {
+    box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+    border-color: rgb(0,0,0);
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
-    outline-offset: 2px;
+    outline-offset: 1px;
   }
 
   //background-color: var(--primary-active-color);

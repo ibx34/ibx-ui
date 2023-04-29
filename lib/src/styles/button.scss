@@ -4,51 +4,63 @@
     font-size: 0.850rem;
     font-kerning: auto;
     letter-spacing: 0.052rem;
-    padding-top: 0.400rem;
-    padding-bottom: 0.400rem;
+    padding-top: 0.420rem;
+    padding-bottom: 0.420rem;
     padding-left: 0.500rem;
     padding-right: 0.500rem;
     cursor: pointer;
-    border: none;
-    transition: all;
-    transition-duration: 150ms;
-    transition-timing-function: ease-in-out;
-    border-radius: 0.200rem;
-
-    &:hover {
-        background-color: var(--secondary-hover-color);
-    }
-
-    &:active {
-        background-color: var(--secondary-active-color);
-    }
+    border: solid;
+    border-width: 1px;
+    transition: box-shadow 80ms ease-in-out, outline 60ms ease;
+    border-radius: 0.250rem;
+    border-color: rgba(0, 0, 0, 0.3);
 
     &:disabled {
         cursor: not-allowed;
         background-color: rgba(0, 0, 0, 0.3);
+    }
+}
 
+.button--secondary:not(.button--danger) {
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px -1px 0 0 rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        background-color: var(--secondary-active-color);
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        border-color: rgb(0, 0, 0);
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 1px;
     }
 }
 
 .button--primary {
     color: var(--primary-text-color);
+    border-color: var(--primary-color);
     background-color: var(--primary-color);
 
     &:hover:not(:disabled) {
+        border-color: var(--primary-hover-shadow-color);
         background-color: var(--primary-hover-color);
-        box-shadow: inset 2px 2px 0 0 var(--primary-hover-shadow-color), inset -2px -2px 0 0 var(--primary-hover-shadow-color);
-    }
-
-    &:focus:not(:disabled) {
-        box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color), inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
+        box-shadow: inset 1px 1px 0 0 var(--primary-hover-shadow-color), inset -1px -1px 0 0 var(--primary-hover-shadow-color);
     }
 
     &:active:not(:disabled),
     &:focus:not(:disabled) {
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        border-color: rgb(0, 0, 0);
         outline: 2px;
         outline-color: var(--primary-color);
         outline-style: solid;
-        outline-offset: 0.10rem;
+        outline-offset: 1px;
+        background-color: var(--primary-color);
+        color: var(--primary-text-color);
     }
 
     //background-color: var(--primary-active-color);
@@ -56,23 +68,25 @@
 
 .button--danger {
     color: var(--danger-text-color);
+    border-color: var(--danger-color);
     background-color: var(--danger-color);
 
     &:hover:not(:disabled) {
         background-color: var(--danger-hover-color);
+        border-color: var(--danger-hover-shadow-color);
         box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
-    }
-
-    &:focus:not(:disabled) {
-        box-shadow: inset 1px 1px 0 0 var(--primary-focused-shadow-color), inset -1px -1px 0 0 var(--primary-focused-shadow-color);
     }
 
     &:active:not(:disabled),
     &:focus:not(:disabled) {
+        color: var(--danger-text-color);
+        background-color: var(--danger-color);
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        border-color: rgb(0, 0, 0);
         outline: 2px;
         outline-color: var(--primary-color);
         outline-style: solid;
-        outline-offset: 0.13rem;
+        outline-offset: 1px;
     }
 
     //background-color: var(--primary-active-color);

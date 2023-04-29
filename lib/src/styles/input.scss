@@ -1,0 +1,40 @@
+input:not(input[checkbox]):not(.switch--checkbox) {
+    padding-top: 0.400rem;
+    padding-bottom: 0.400rem;
+    padding-left: 0.500rem;
+    padding-right: 0.500rem;
+    border-style: solid;
+    border-width: 0.12rem;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.200rem;
+    outline: none;
+    transition: all;
+    color: var(--input-text-color);
+    transition-duration: 60ms;
+    transition-timing-function: ease;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    // Smaller or larger? Maybe i should revert back to 945
+    font-size: 0.890rem;
+    font-kerning: auto;
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 0.08rem;
+        border-color: black;
+    }
+
+    &:read-only {
+        user-select: none;
+        cursor: not-allowed;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-color: black;
+    }
+}

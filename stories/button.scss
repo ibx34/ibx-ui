@@ -1,5 +1,3 @@
-@import url('./main.scss');
-
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -13,24 +11,13 @@
   cursor: pointer;
   border: solid;
   border-width: 1px;
-  transition: box-shadow 80ms ease-in-out, outline 60ms ease; 
+  transition: box-shadow 80ms ease-in-out, outline 60ms ease;
   border-radius: 0.250rem;
-  border-color: rgba(0,0,0,0.3);
+  border-color: rgba(0, 0, 0, 0.3);
 
-  &:hover {
-    background-color: rgba(0,0,0,0.1);
-    box-shadow: inset 1px 1px 0 0 rgba(0,0,0,0.5), inset -1px -1px 0 0 rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.5);
-  }
-
-  &:active:not(:disabled),&:focus:not(:disabled) {
-    background-color: var(--secondary-active-color);
-    box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
-    border-color: rgb(0,0,0);
-    outline: 2px;
-    outline-color: var(--primary-color);
-    outline-style: solid;
-    outline-offset: 1px;
+  .button--block {
+    width: 100%;
+    display: block;
   }
 
   &:disabled {
@@ -39,9 +26,28 @@
   }
 }
 
+.button--secondary:not(.button--danger) {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px -1px 0 0 rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: var(--secondary-active-color);
+    box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+    border-color: rgb(0, 0, 0);
+    outline: 2px;
+    outline-color: var(--primary-color);
+    outline-style: solid;
+    outline-offset: 1px;
+  }
+}
+
 .button--primary {
   color: var(--primary-text-color);
-  border-color: var(--primary-color);
+  border-color: var(--primary-active-color);
   background-color: var(--primary-color);
 
   &:hover:not(:disabled) {
@@ -49,16 +55,17 @@
     background-color: var(--primary-hover-color);
     box-shadow: inset 1px 1px 0 0 var(--primary-hover-shadow-color), inset -1px -1px 0 0 var(--primary-hover-shadow-color);
   }
-  // &:focus:not(:disabled) {
-  //   box-shadow: inset 1.3px 1.3px 0 0 var(--primary-focused-shadow-color),  inset -1.3px -1.3px 0 0 var(--primary-focused-shadow-color);
-  // }
-  &:active:not(:disabled), &:focus:not(:disabled) {
+
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
     box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
-    border-color: rgb(0,0,0);
+    border-color: rgb(0, 0, 0);
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
     outline-offset: 1px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
   }
 
   //background-color: var(--primary-active-color);
@@ -66,7 +73,7 @@
 
 .button--danger {
   color: var(--danger-text-color);
-  border-color: var(--danger-color);
+  border-color: var(--danger-active-color);
   background-color: var(--danger-color);
 
   &:hover:not(:disabled) {
@@ -75,10 +82,10 @@
     box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
   }
 
-  &:active:not(:disabled),
   &:focus:not(:disabled) {
     box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
-    border-color: rgb(0,0,0);
+    background-color: var(--danger-active-color);
+    border-color: rgb(0, 0, 0);
     outline: 2px;
     outline-color: var(--primary-color);
     outline-style: solid;
@@ -90,13 +97,22 @@
 
 .button--warning {
   color: var(--warning-text-color);
+  border-color: var(--warning-active-color);
   background-color: var(--warning-color);
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--warning-hover-color);
+    border-color: var(--warning-hover-shadow-color);
+    box-shadow: inset 2px 2px 0 0 var(--warning-hover-shadow-color), inset -2px -2px 0 0 var(--warning-hover-shadow-color);
   }
 
-  &:active {
+  &:focus:not(:disabled) {
+    box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
     background-color: var(--warning-active-color);
+    border-color: rgb(0, 0, 0);
+    outline: 2px;
+    outline-color: var(--primary-color);
+    outline-style: solid;
+    outline-offset: 1px;
   }
 }

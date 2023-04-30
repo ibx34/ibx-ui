@@ -14,6 +14,8 @@
     transition: box-shadow 80ms ease-in-out, outline 60ms ease;
     border-radius: 0.250rem;
     border-color: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    box-sizing: border-box;
 
     &:disabled {
         cursor: not-allowed;
@@ -42,7 +44,7 @@
 
 .button--primary {
     color: var(--primary-text-color);
-    border-color: var(--primary-color);
+    border-color: var(--primary-active-color);
     background-color: var(--primary-color);
 
     &:hover:not(:disabled) {
@@ -68,7 +70,7 @@
 
 .button--danger {
     color: var(--danger-text-color);
-    border-color: var(--danger-color);
+    border-color: var(--danger-active-color);
     background-color: var(--danger-color);
 
     &:hover:not(:disabled) {
@@ -77,11 +79,9 @@
         box-shadow: inset 2px 2px 0 0 var(--danger-hover-shadow-color), inset -2px -2px 0 0 var(--danger-hover-shadow-color);
     }
 
-    &:active:not(:disabled),
     &:focus:not(:disabled) {
-        color: var(--danger-text-color);
-        background-color: var(--danger-color);
         box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        background-color: var(--danger-active-color);
         border-color: rgb(0, 0, 0);
         outline: 2px;
         outline-color: var(--primary-color);
@@ -94,13 +94,22 @@
 
 .button--warning {
     color: var(--warning-text-color);
+    border-color: var(--warning-active-color);
     background-color: var(--warning-color);
 
-    &:hover {
+    &:hover:not(:disabled) {
         background-color: var(--warning-hover-color);
+        border-color: var(--warning-hover-shadow-color);
+        box-shadow: inset 2px 2px 0 0 var(--warning-hover-shadow-color), inset -2px -2px 0 0 var(--warning-hover-shadow-color);
     }
 
-    &:active {
+    &:focus:not(:disabled) {
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
         background-color: var(--warning-active-color);
+        border-color: rgb(0, 0, 0);
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 1px;
     }
 }

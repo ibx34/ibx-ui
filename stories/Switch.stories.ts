@@ -8,8 +8,8 @@ export default {
     argTypes: {
         value: { type: 'boolean', default: false },
         label: { type: 'string', default: "Keep your settings" },
-        left: { type: 'string', default: "On" },
-        right: { type: 'string', default: "Off" },
+        disabled: { type: 'boolean', default: false },
+        readOnly: { type: 'boolean', default: false },
     },
 };
 
@@ -17,7 +17,25 @@ export const Default = {
     args: {
         label: "Keep your settings",
         value: false,
-        left: "On",
-        right: "Off"
+        readOnly: false,
+        disabled: false
+    },
+};
+
+export const Disabled = {
+    args: {
+        label: "Keep your settings",
+        value: false,
+        readOnly: false,
+        disabled: true
+    },
+};
+
+export const ReadOnly = {
+    args: {
+        label: "Keep your settings",
+        value: false,
+        readOnly: true,
+        disabled: false
     },
 };

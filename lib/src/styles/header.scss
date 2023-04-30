@@ -1,0 +1,23 @@
+.header {
+    color: var(--input-text-color);
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-kerning: auto;
+    box-sizing: border-box;
+}
+
+.header--100 {
+    font-size: .900rem;
+}
+
+.header--200 {
+    font-size: 1.5rem;
+}
+
+.header--300 {
+    font-size: 2rem;
+}
+
+.header--400 {
+    font-size: 2.5rem;
+}

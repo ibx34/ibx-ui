@@ -1,5 +1,3 @@
-@import url('./main.scss');
-
 .switch--box {
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 600;
@@ -9,8 +7,19 @@
     color: var(--input-text-color);
     display: flex;
     flex-direction: row;
-    gap: 0.75rem;
+    gap: 0.4rem;
     align-items: center;
+    max-width: max-content;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.switch--name {
+    width: 100%;
+    white-space: nowrap;
+    max-width: max-content;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .switch {
@@ -36,8 +45,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 40px;
+    max-width: max-content;
     width: 100%;
+    box-sizing: border-box;
 
     &:active:not(:disabled),
     &:focus:not(:disabled) {
@@ -51,6 +61,7 @@
 .switch--on {
     background-color: var(--switch-on-color);
     border-color: var(--switch-on-color);
+    box-sizing: border-box;
 
     &.switch--readonly {
         fill: var(--input-hover-color);
@@ -63,6 +74,7 @@
 
 .switch--label {
     background-color: transparent;
+    box-sizing: border-box;
     fill: transparent;
     display: flex;
     flex-direction: row;
@@ -71,6 +83,10 @@
     align-items: center;
     justify-content: center;
     width: max-content;
+    padding-left: 0.250rem;
+    padding-right: 0.250rem;
+    padding-top: 0.120rem;
+    padding-bottom: 0.120rem;
 
     &.selected {
         fill: white;
@@ -78,6 +94,10 @@
 
 
     &.off {
+        padding-left: 0.100rem;
+        padding-right: 0.100rem;
+        padding-top: 0.100rem;
+        padding-bottom: 0.100rem;
         background-color: white;
         fill: white;
         border-radius: 999rem;
@@ -86,6 +106,7 @@
 
 .switch--puck {
     background-color: white;
+    box-sizing: border-box;
     padding-left: 0.150rem;
     padding-right: 0.150rem;
     padding-top: 0.150rem;
@@ -106,6 +127,7 @@
 }
 
 .switch--checkbox {
+    box-sizing: border-box;
     position: absolute;
     top: 0px;
     left: 0px;

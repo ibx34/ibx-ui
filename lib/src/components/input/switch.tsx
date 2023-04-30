@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import PropTypes, { bool, number } from 'prop-types';
-import './switch.scss';
+import '../../styles/switch.scss';
 
-export const Switch = ({ label, disabled, readOnly, value, ...props }) => {
-    const [switchValue, setSwitchValue] = useState<boolean>(value == undefined ? false : value);
+export interface ISwitchProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+    disabled?: boolean,
+    readOnly?: boolean,
+    label?: string,
+    initialValue?: boolean,
+}
+
+export const Switch: React.FunctionComponent<ISwitchProps> = ({ label, initialValue, disabled, readOnly, ...props }) => {
+    const [switchValue, setSwitchValue] = useState<boolean>(initialValue ? initialValue : false);
     return (
         <div className="switch--box">
-            {label == undefined ? null : <span>{label}</span>}
+            {label == undefined ? null : <span className="switch--name">{label}</span>}
             <label className={["switch", switchValue ? 'switch--on' : '', readOnly ? 'switch--readonly' : ''].join(' ')}>
-                <input readOnly={readOnly} disabled={disabled} className="switch--checkbox" type="checkbox" value={switchValue == false ? 1 : 0} checked={value} onChange={(e) => {
+                <input readOnly={readOnly} disabled={disabled} className="switch--checkbox" type="checkbox" value={switchValue == false ? 1 : 0} checked={switchValue} onChange={(e) => {
                     if (!readOnly) {
                         setSwitchValue(parseInt(e.target.value) > 0 ? true : false)
                     }
@@ -18,15 +24,4 @@ export const Switch = ({ label, disabled, readOnly, value, ...props }) => {
             </label>
         </div>
     );
-};
-
-Switch.propTypes = {
-    value: PropTypes.bool,
-    label: PropTypes.string,
-    disabled: PropTypes.bool,
-    readOnly: PropTypes.bool
-};
-
-Switch.defaultProps = {
-    value: false,
-};
+}

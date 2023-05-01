@@ -5,6 +5,8 @@
         --primary-hover-color: rgb(0, 51, 102);
         --primary-active-color: rgb(35, 52, 73);
         --primary-hover-shadow-color: rgb(54, 123, 206);
+        --select-option-selected: rgba(54, 123, 206, 0.6);
+        --select-option-hover: rgba(0, 51, 102, 0.6);
 
         --danger-color: rgb(217, 30, 24);
         --danger-text-color: white;
@@ -23,6 +25,7 @@
         --input-disabled-color: rgba(90, 90, 90, 0.3);
         --switch-on-color: rgb(38, 201, 95);
         --switch-disabled-color: rgb(33, 163, 78);
+        --text-muted-color: rgb(112, 112, 112);
     }
 }
 

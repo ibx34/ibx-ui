@@ -4,20 +4,45 @@
     font-weight: 600;
     font-kerning: auto;
     box-sizing: border-box;
+    padding: none;
 }
 
 .header--100 {
-    font-size: .900rem;
+    font-size: .700rem;
 }
 
 .header--200 {
-    font-size: 1.5rem;
+    font-size: .900rem;
 }
 
 .header--300 {
-    font-size: 2rem;
+    font-size: 1rem;
+}
+
+.header--350 {
+    font-size: 1.2rem;
 }
 
 .header--400 {
+    font-size: 1.5rem;
+}
+
+.header--500 {
+    font-size: 2rem;
+}
+
+.text--muted {
+    fill: var(--text-muted-color);
+    color: var(--text-muted-color);
+}
+
+.text--primary {
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+h1 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     font-size: 2.5rem;
 }

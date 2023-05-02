@@ -1,0 +1,45 @@
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.100rem;
+}
+
+.stat--title {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.052rem;
+    font-size: .900rem;
+    padding: 0;
+    margin: 0;
+}
+
+.stat--loading {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.052rem;
+    font-weight: 700;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    padding: 0;
+    margin: 0;
+}
+
+.stat--value {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.052rem;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}

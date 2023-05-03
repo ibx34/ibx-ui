@@ -25,20 +25,21 @@
     appearance: none;
     background-color: transparent;
 
-    &:focus:not(:disabled),
-    &:active:not(:disabled) {
-        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
-        outline: 2px;
-        border-color: rgb(0, 0, 0);
-        outline-color: var(--primary-color);
-        outline-style: solid;
-        outline-offset: 1px;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px -1px 0 0 rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.5);
     }
 
     &:active:not(:disabled),
-    &:hover:not(:disabled) {
-        box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px -1px 0 0 rgba(0, 0, 0, 0.5);
-        border-color: rgba(0, 0, 0, 0.5);
+    &:focus:not(:disabled) {
+        background-color: var(--secondary-active-color);
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        border-color: rgb(0, 0, 0);
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 1px;
     }
 }
 

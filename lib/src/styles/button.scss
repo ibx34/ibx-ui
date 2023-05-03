@@ -109,8 +109,30 @@
         background-color: var(--primary-color);
         color: var(--primary-text-color);
     }
+}
 
-    //background-color: var(--primary-active-color);
+.button--success {
+    color: var(--success-text-color);
+    border-color: var(--success-active-color);
+    background-color: var(--success-color);
+
+    &:hover:not(:disabled) {
+        border-color: var(--success-hover-shadow-color);
+        background-color: var(--success-hover-color);
+        box-shadow: inset 1px 1px 0 0 var(--success-hover-shadow-color), inset -1px -1px 0 0 var(--success-hover-shadow-color);
+    }
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        box-shadow: inset 2px 2px 0 0 transparent, inset -2px -2px 0 0 transparent;
+        border-color: rgb(0, 0, 0);
+        outline: 2px;
+        outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-offset: 1px;
+        background-color: var(--success-color);
+        color: var(--success-text-color);
+    }
 }
 
 .button--danger {

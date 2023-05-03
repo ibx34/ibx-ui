@@ -18,6 +18,7 @@ export const Button: FunctionComponent<IButtonProps> = ({ size, color, subtle, b
         "primary": "button--primary",
         "secondary": "button--secondary",
         "danger": "button--danger",
+        "success": "button--success",
         "warning": "button--warning"
     }[color];
     const btn_size = {
